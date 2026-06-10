@@ -21,8 +21,27 @@ const frameworks = [
  *
  * 1. Itere el arreglo frameworks.
  *    Referencia: https://javascript.info/array#loops
- * 
- * 2. En cada iteración:
+ */ 
+
+for (const framework of frameworks) {
+  let [
+    frameworkName,
+    releaseDate,
+    usersName,
+    popularityPercentage
+  ] = framework.split("|").map(value => value.trim()); 
+
+  let frameworkObj = {
+    frameworkName,
+    releaseDate,
+    usersName,
+    popularityPercentage
+  };
+
+  addRow(frameworkObj, "data-frameworks");
+
+}
+ /* 2. En cada iteración:
  *
  *    Tome una cadena del arreglo y divídala en partes usando el separador "|".
  *    Referencia: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
